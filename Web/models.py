@@ -13,6 +13,14 @@ class Hero(models.Model):
     def __str__(self):
         return self.category
 
+
+class Hero_big(models.Model):
+    title = models.CharField(max_length=30)
+    description = models.TextField()
+    image = models.ImageField(upload_to='big_image')
+
+    def __str__(self):
+        return self.title
 # this is for general products below:
 
 class Product(models.Model):
